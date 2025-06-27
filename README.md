@@ -47,6 +47,32 @@ Technical requirements in submission:
 * These requirements were implemented by creating a Python notebook, or notebooks in the Azure Databricks workspace. 
 * A PDF of the schema is submitted along with your Azure Databricks notebook files.
 
+## Project Rubric
+Dimensional model should have two fact tables (trip and payment)
+* Trip table: contains duration and the age of rider at the time of trip
+* Payment table: contains payment amount
+
+Dimensional model should have three dimension tables (riders, stations and dates)
+* Trip table dimensions: riders, stations and dates
+* Payment table dimensions: dates and riders
+
+Extraction step
+* Python code to extract information from CSV stored in Databrics
+* Write data to the Delta file system
+* Spark code using Jupyter Notebooks and Python scripts
+* Using DBFS distributed data storage
+
+Load step
+* Code should create and load tables from Delta files
+* Spark SQL should be used to create and load data
+
+Transform step
+* Fact table transformation should contain dimension keys
+* Fact tables should match the designed ERD diagram
+* Dimension tables should contain the keys but not the facts
+* Dimension tables should match the designed ERD diagram
+* Spark code in transformation should write to delta, should use overwrite mode and save as a table in delta
+
 
 # Project Solution
 
