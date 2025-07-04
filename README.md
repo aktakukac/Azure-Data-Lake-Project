@@ -79,7 +79,7 @@ Transform step
 ## Star Schema Design
 A star schema is designed based on the business outcomes listed in the Task Description
 
-_Add ERD diagram image here_
+![Final ERD diagram](images/final_ERD.jpg)
 
 ## Data Load
 The data was imported into Azure Databricks using Delta Lake to create a Bronze data store
