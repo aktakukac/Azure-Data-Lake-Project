@@ -82,16 +82,39 @@ A star schema is designed based on the business outcomes listed in the Task Desc
 ![Final ERD diagram](images/final_ERD.jpg)
 
 ## Data Load
-The data was imported into Azure Databricks using Delta Lake to create a Bronze data store
+A workspace was created in Lab environment using the credentials provided
 
-_Add screenshots of data import here_
+![Workspace](images/0_workspace_created.jpg)
 
-## Gold Data Store
-A gold data store was created in Delta Lake tables using Python notebook
+A compute was created according to the requirements in the Lab environment
 
-_Add link to Pyton notebook here_
+![Compute](images/1_compute_created.jpg)
+
+The data was imported into Azure Databricks DBFS using python notebooks
+
+![Files upladed](images/2_upload_files.jpg)
+
+![Files upladed 2](images/2_upload_files_2.jpg)
+
+See: Load_procedure.ipynb
+
+## Bronze Data Store
+
+Data was transformed from csv to delta files
+
+![Bronze](images/3_bronze_delta_tables.jpg)
+
+## Silver Data Store
+
+All data was modified to match the corresponding ERD and loaded to silver delta tables
+
+![Silver](images/4_silver_delta_tables.jpg)
+
+See: Silver_procedure.ipynb
 
 ## Star Schema Trasformation
-The data was transformed into the star schema for a Gold data store using Python notebook
+The data was transformed into the star schema for a Gold data store - Fact and Dimension tables were created
 
-_Add link to Pyton notebook here_
+![Gold](images/5_gold_delta_tables.jpg)
+
+See: Gold_procedure.ipynb
